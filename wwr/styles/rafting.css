@@ -1,7 +1,12 @@
 :root {
-    --dark-blue: #232560;
-    --light-forest-green: #677755;
     --grey: rgb(100, 100, 100);
+    --brown: #5b3d1d;
+    --orangeold: #d18037;
+    --orange: #9e691f;
+    --tealold: #1ba595;
+    --teal: #0F8577;
+    --yellow: #f6b81a;
+    --green2: #717933;
     --heading-font: Verdana, Geneva, Tahoma, sans-serif;
     --body-font: Arial, Helvetica, sans-serif;
 }
@@ -10,13 +15,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 }
 
 /*fonts*/
 
 body {
     font-family: var(--body-font);
-    color: black
+    color: var(--brown)
 }
 
 h1, h2 {
@@ -45,8 +51,10 @@ header {
 }
 
 header img {
-    width: 75px;
+    width: 120px;
     margin: 15px;
+    align-items: center;
+    justify-self: center;
 }
 
 nav {
@@ -63,8 +71,8 @@ nav {
     display: block;
     width: 140px;
     text-align: center;
-    border: 3px solid var(--dark-blue);
-    color: var(--dark-blue);
+    border: 3px solid var(--brown);
+    color: var(--brown);
     padding: 10px;
     text-decoration: none;
     font-size: 1.2rem;
@@ -76,76 +84,96 @@ h1 {
     width: 840px;;
     padding: 16px;
     text-align: center;
-    font-size: 2rem;
+    font-size: 4rem;
 }
 
 h2 {
-    width: 840px;
+    width: 100%;
     padding: 16px;
     text-align: center;
-    background-color: var(--light-forest-green);
+    background-color: var(--teal);
     color: white;
 }
 
 /*contact us*/
 
-.contacth1 {
-    color: var(--light-forest-green);
-    border-bottom: 5px solid var(--light-forest-green);
+.send_us {
+    color: var(--brown)
 }
+
 .contactinfo {
     text-align: center;
     font-size: 1.2rem;
     padding: 1rem;
-    border-bottom: 5px solid var(--light-forest-green)
+    margin: 0 auto;
+    width: 300px;
+    border: 3px solid var(--teal);
 }
 
 .mapform {
     display: grid;
-    grid-template-columns: 315px 1fr;
-    width: 750px;
-    grid-gap: 32px;
-    margin-top: 2rem;
+    grid-template-columns: 430.78px 315px;
+    width: 840px;
+    padding: 2rem;
+    grid-gap: 30px;
 }
 
 fieldset {
-    display: grid;
-    grid-template-columns: 200px 1fr;
-    grid-gap: 1rem;
     border: none;
 }
 
-.enter_name, .enter_email {
-    grid-column: 1/3;
-    width: 449px;
-    height: 2rem;
-
+.form {
+    padding: 0.5rem;
 }
 
-.enter_name input, .enter_email input {
-    width: 350px;
-    height: 2rem;
-}
-
-.message_purpose {
-    grid-column: 1/2;
-    padding: 1rem 0 1rem 0;
-}
-
-.message_area {
+.enter_email input, .enter_name input {
     grid-column: 2/3;
-    padding: 1rem 0 1rem 0;
-}
-
-.subscribe {
-    grid-column: 1/3;
-}
-
-button[type="submit"] {
-    grid-column: 1/3;
-    width: 200px;
+    width: 100%;
     height: 2rem;
+}
+
+.message_purpose input, .message_purpose label {
+   margin: 0.3rem;
+   grid-column: 1/3;
+}
+
+.message_area textarea {
+    width: 100%;
+}
+
+.mapform button[type="submit"] {
+    width: 100%;
+    height: 2.5rem;
     margin: 0 auto;
+    background-color: var(--orange);
+    color: white;
+    font-size: 1.1rem;
+    border: none;
+}
+
+.serve_you {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    place-items: center;
+    border: 3px solid var(--teal);
+    padding-bottom: 2.5rem;
+}
+
+.serve_you h2 {
+    margin-bottom: 2rem;
+    grid-column: 1/5;
+}
+
+.serve_you figure img {
+    width: 250px;
+    height: auto;
+    padding: 16px;
+}
+
+.serve_you figure figcaption {
+    text-align: center;
+    font-size: 1.2rem;
 }
 
 /*about us*/
@@ -159,7 +187,7 @@ button[type="submit"] {
 }
 
 .hero h1 {
-    top: 20px;
+    top: 50px;
     position: absolute;
     color: #fff;
 }
@@ -167,20 +195,20 @@ button[type="submit"] {
 .hero article {
     position: absolute;
     bottom: 10px;
+    left: 6px;
     width: 95%;
     padding: 10px;
-    opacity: 0.8;
-    background-color: var(--grey);
+    background-color: rgb(158 105 31 / 75%);
     color: #fff;
 }
 
 .hero article img {
     float: right;
-    width: 125px;
+    width: 100px;
 }
 
 .hero article p {
-    width: 620px;
+    width: 640px;
     margin: 16px;
     padding: 8px;
 }
@@ -190,7 +218,6 @@ button[type="submit"] {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto auto;
-    
 }
 
 .history h2 {
@@ -214,18 +241,6 @@ button[type="submit"] {
     padding: 8px;
 }
 
-.serve_you {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto auto;
-    place-items: center;
-}
-
-.serve_you h2 {
-    margin: 2rem 0 2rem 0;
-    grid-column: 1/5;
-}
-
 .adventure {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -237,14 +252,184 @@ button[type="submit"] {
     grid-column: 1/6;
 }
 
-figure img {
+.adventure figure img {
     width: 150px;
     height: auto;
     padding: 16px;
 }
 
-figure figcaption {
+.adventure figure figcaption {
     text-align: center;
+}
+
+/*Home*/
+
+.things-to-do {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    place-items: center;
+    margin: 4rem 0 4rem 0;
+}
+
+.things-to-do figure img {
+    width: 200px;
+    height: auto;
+    border: 8px solid var(--teal)
+}
+
+.things-to-do figure figcaption {
+    text-align: center;
+    font-size: 1.4rem;
+    padding-top: 0.5rem;
+}
+
+.shoutout h3, p, a {
+    padding: 0.5rem;
+}
+ 
+.trips_shoutout {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 4rem;
+}
+
+.trips_shoutout img {
+    width: 840px;
+}
+
+.shoutout {
+    position: absolute;
+    width: 600px;
+    height: 100px;
+    top: 120px;
+    left: 120px;
+    color: white;
+}
+
+.shoutout h3 {
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.shoutout p {
+    font-size: 1.5rem;
+    text-align: center;
+    padding-bottom: 1.7rem;
+}
+
+.shoutout a {
+    display: block;
+    text-align: center;
+    width: 180px;
+    height: 60px;
+    align-content: center;
+    margin: 0 auto;
+    background-color: var(--orange);
+    color: white;
+    text-decoration: none;
+}
+
+.subscribe-news {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 700px;
+    margin: 0 auto;
+    padding: 2rem;
+    border: 1px solid rgb(0 0 0 / 10%);
+}
+
+.subscribe-news h3 {
+    text-align: center;
+    font-size: 1.5rem;
+    grid-column: 1/3;
+    padding-bottom: 1rem;
+}
+
+.first, .last, .email {
+    padding: 0.5rem;
+}
+
+.first input, .last input, .email input {
+    width: 100%;
+    height: 35px;
+}
+
+.email {
+    grid-column: 1/3;
+    margin-bottom: 1rem;
+}
+
+.subscribe-news button[type="submit"] {
+    margin: 0 auto;
+    grid-column: 1/3;
+    font-size: 1.1rem;
+    width: 175px;
+    height: 50px;
+    border: none;
+    background-color: var(--teal);
+    color: white;
+}
+
+/*Trips*/
+ 
+.list-of-trips {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 755px 820px;
+    width: 840px;
+    grid-gap: 30px;
+    
+}
+
+.list-of-trips h2 {
+    grid-column: 1/3;
+    margin-top: 1rem;
+}
+
+.list-of-trips figcaption {
+    font-size: 1.6rem;
+    margin-top: 1rem;
+    padding: 0.7rem;
+    font-weight: bold;
+    color: white;
+    
+}
+
+.list-of-trips figure img{
+    width: 275px;
+    height: auto;
+    border: 8px solid white;
+}
+
+.list-of-trips figure {
+    margin: 0 auto;
+    width: 405px;
+    text-align: center;
+    background-color: var(--orange);
+    border-radius: 1.3rem;  
+}
+
+.list-of-trips figure p {
+    width: 300px;
+    text-align: left;
+    margin: 0 auto;
+    color: white;
+    line-height: 140%;
+    
+}
+
+.list-of-trips figure a {
+    display: block;
+    text-decoration: none;
+    width: 150px;
+    height: 50px;
+    align-content: center;
+    margin: 0 auto;
+    margin-top: 0.4rem;
+    background-color: var(--teal);
+    color: white;
+    border: 3px solid white
 }
 
 /* Footer */
